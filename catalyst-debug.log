@@ -1,0 +1,43 @@
+[debug] [2025-01-01T06:47:09.834Z] : 
+[debug] [2025-01-01T06:47:09.838Z] : ----------------------------------------------------------------------
+[debug] [2025-01-01T06:47:09.838Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kathi\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2025-01-01T06:47:09.838Z] : CLI Version:  1.17.6
+[debug] [2025-01-01T06:47:09.839Z] : Platform:     win32
+[debug] [2025-01-01T06:47:09.839Z] : Node Version: v20.15.1
+[debug] [2025-01-01T06:47:09.839Z] : Time:         Wed Jan 01 2025 12:17:09 GMT+0530 (India Standard Time)
+[debug] [2025-01-01T06:47:09.840Z] : ----------------------------------------------------------------------
+[debug] [2025-01-01T06:47:09.840Z] : 
+[debug] [2025-01-01T06:47:11.718Z] : > authorizing via signed-in user option
+[debug] [2025-01-01T06:47:11.719Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2025-01-01T06:47:11.741Z] : > refreshing access token <
+[debug] [2025-01-01T06:47:11.742Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.in/oauth/v2/token 
+<request body omitted>
+
+[debug] [2025-01-01T06:47:12.049Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 01 Jan 2025 06:46:41 GMT","content-type":"application/json;charset=UTF-8","content-length":"1948","connection":"keep-alive","set-cookie":["zalb_6e73717622=cc36c6f8a6790832246efd66c032e512; Path=/; Secure; HttpOnly","iamcsr=d120e945-ded4-47be-bb71-36f395272802;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d120e945-ded4-47be-bb71-36f395272802;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","content-security-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.zohocdn.com https://*.zoho.com https://*.zoho.eu https://*.zoho.com.cn https://*.zoho.com.au https://*.zoho.jp https://*.zoho.uk https://*.zoho.sa https://*.zohocloud.ca; report-uri https://logsapi.zoho.in/csplog?service=accounts;","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2025-01-01T06:47:12.057Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10479000000019199 
+
+[debug] [2025-01-01T06:47:12.437Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 01 Jan 2025 06:46:41 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=411f509465b028e7e235eac6930aaab2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=6326f744-f56e-433e-93cf-5e7056b9d402;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6326f744-f56e-433e-93cf-5e7056b9d402;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2025-01-01T06:47:12.440Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10479000000019199/environment 
+
+[debug] [2025-01-01T06:47:12.545Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 01 Jan 2025 06:46:41 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=ed010f63633be60a322039283f31a645; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=2e8171cf-190d-4b45-87c3-5aafe854ed7a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2e8171cf-190d-4b45-87c3-5aafe854ed7a;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2025-01-01T06:47:13.026Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10479000000019199/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2025-01-01T06:47:13.117Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 01 Jan 2025 06:46:42 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=411f509465b028e7e235eac6930aaab2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=ad22f939-8c36-4aaf-be8a-e335ee3c6959;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ad22f939-8c36-4aaf-be8a-e335ee3c6959;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2025-01-01T06:47:13.123Z] : unknown eol undefined hence skipping check
+[info] [2025-01-01T06:47:15.520Z] : 
+[info] [2025-01-01T06:47:15.521Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2025-01-01T06:47:15.522Z] : i expense_tracker_function: http://localhost:3000/server/expense_tracker_function/
+[info] [2025-01-01T06:47:15.522Z] : 
+[info] [2025-01-01T06:47:15.522Z] : 
+[info] [2025-01-01T06:47:15.523Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2025-01-01T06:47:15.523Z] : i client[ExpenseTracker]: http://localhost:3000/app/
+[info] [2025-01-01T06:47:15.523Z] : 

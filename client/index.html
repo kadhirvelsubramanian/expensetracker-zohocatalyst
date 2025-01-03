@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ExpenseTracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://static.zohocdn.com/catalyst/sdk/js/4.0.0/catalystWebSDK.js"></script>
+    <script src="/__catalyst/sdk/init.js"></script>
+
+</head>
+
+<body>
+    <div id="login_home_page">
+            <img src="login_bg.jpeg" height="100%" width="100%">
+            <div id="login_header">Wallet Watch</div>
+            <div id="container">
+                <div id ="inup">
+                    <h6 id="prompt">Already having account?</h6>
+                    <button  style="display:flex" id="signin_button" onclick="signin_func()">Sign in</button>
+                    <h6 id="prompt">New User?create new account</h6>
+                    <button  style="display:flex" id="signup_button" onclick="signup_func()">Sign up</button>
+                </div>
+            </div>
+    </div>
+    <div id="login_back">
+        <div id="login_container"></div>
+    </div>
+    <div id="home_page">
+        <div id="header">
+            <div id="header_one">
+                <div id="header_name">Wallet Watch</div>
+                <button id="logout_button" onclick="logout_func()">Logout</button>
+            </div>
+            <div id="header_two">
+                <div class="header_button" id="homebut" onclick="home()">Home</div>
+                <div class="header_button" id="expbut" onclick="expenses()">Expenses</div>
+                <div class="header_button" id="repbut" onclick="report()">Visual-Report</div>
+                <!-- <div class="header_button" id="analbut" onclick="anal()">Analyze</div> -->
+                <div class="header_button" id="probut" onclick="profile()">Profile</div>
+            </div>
+        </div>
+        <div id="home">
+            <div id="home_header">
+                <div>Welcome to Wallet Watch!</div>
+                <div>*** You are logged in as User ***</div>
+            </div>
+            <div id="home_content">Wallet Watch empowers you to take control of your finances with clarity and precision. Our intuitive platform offers a comprehensive set of tools to help you track, analyze, and visualize your expenses like never before.
+                At Wallet Watch, we believe in smarter, simpler financial management. Take charge of your financial future with confidence and ease. Your journey to financial clarity starts here!
+            </div>
+            <div id="home_para"><h2>Key Features:</h2>
+            <h4>Expense Overview: </h4>Stay on top of your spending with a clear, organized view of your expenses. Track your daily, weekly, and monthly transactions to identify where your money is going and stay within your budget.<br>
+
+            <h4>Data Analysis Tools:</h4> Gain actionable insights into your financial habits. Use interactive tables to filter, sort, and explore your spending patterns, making it easier to spot trends and areas for improvement.<br>
+
+            <h4>Visual Reports: </h4>Turn complex financial data into simple, meaningful visuals. Access bar charts, pie charts, and summary tables that provide a quick, clear understanding of your financial health at a glance.<br>
+
+            <h4>Personalized User Profile:</h4> Your personalized profile section ensures you always know who's logged in. View and manage your user information, account details, and preferences for a more tailored experience.
+            </div>
+        </div>
+        <div id="expenses">
+            <div id="add_exp" onclick="add_expense()">
+                Click here to add your Expenses
+            </div>
+            <div id="one_exp">
+            </div>
+        </div>
+            <div id="back">
+            <div id="expense_form">
+                <div id="form_header">
+                    Add Expense
+                </div>
+                <div id="form_name">
+                    <label>ExpenseName :</label>
+                    <select id="expense_select" onchange="handleChange(this)">
+                        <option value="" disabled selected>-- Select a Expense --</option>
+                        <option value="Food">Food</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Accomodation">Accomodation</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Subscriptions">Subscriptions</option>
+                        <option value="Office Utilities">Office Utilities</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <div id="form_amount">
+                    <label>Amount :</label>
+                    <input type="number" id="input_amount">
+                </div>
+                <div id="form_buttons">
+                    <button id="submit" onclick="submit_form()">Submit</button>
+                    <button id="close" onclick="close_form()">Close</button>
+                </div>
+            </div>
+            </div>
+        <div id="report">
+             <div id="two">
+                <div id="exp" onclick="view_exp()">Expenses Table(ALL)</div>
+                <div id="pen" onclick="view_pen()">Expenses Table (Accepted)</div>
+             </div>
+             <div id="two">
+                <div id="bar" onclick="view_bar()">Bar Chart</div>
+                <div id="pie" onclick="view_pie()">Pie Chart</div>
+             </div>
+        </div>
+            <div id="pie_back">
+            <div id="close_pie" onclick="close_pie()">&times</div>
+            <div id="pie_con">
+                <canvas id="myPieChart"></canvas>
+            </div>
+            </div>
+            <div id="exp_back">
+            <div id="close_exp" onclick="close_exp()">&times</div>
+            <table id="exp_table">
+                <tr>
+                    <th id="table">Expense_Name</th>
+                    <th id="table">Amount_Spent</th>
+                </tr>
+            </table>
+            </div>
+            <div id="pen_back">
+            <div id="close_pen" onclick="close_pen()">&times</div>
+            <table id="pen_table">
+                <tr>
+                    <th id="table">Expense_Name</th>
+                    <th id="table">Amount_Spent</th>
+                </tr>
+            </table>
+            </div>
+            <div id="bar_back">
+            <div id="close_bar" onclick="close_bar()">&times</div>
+            <div id="bar_con">
+                <canvas id="myBarChart" width="400" height="200"></canvas>
+            </div>
+            </div>
+        <div id="anal"></div>
+        <div id="profile">
+            <div id="pro_header">Your Details</div>
+        </div>
+    </div>
+    <div id="home_page_admin">
+        <div id="admin_header">
+            <div id="admin_header_one">
+                <div id="admin_header_name">Wallet Watch</div>
+                <button id="admin_logout_button" onclick="logout_func()">Logout</button>
+            </div>
+            <div id="admin_header_two">
+                <div class="admin_header_button" id="admhomebut" onclick="admin_home()">Home</div>
+                <div class="admin_header_button" id="admexpbut" onclick="admin_expenses()">Expenses</div>
+                <div class="admin_header_button" id="admrepbut" onclick="admin_report()">Visual-Report</div>
+                <div class="admin_header_button" id="admanalbut" onclick="admin_anal()">Analyze</div>
+                <div class="admin_header_button" id="admprobut" onclick="admin_profile()">Profile</div>
+            </div>
+        </div>
+        <div id="admin_home">
+            <div id="home_header">
+                <div>Welcome to Wallet Watch!</div>
+                <div>*** You are logged in as Admin ***</div>
+            </div>
+            <div id="home_content">Wallet Watch empowers you to take control of your finances with clarity and precision. Our intuitive platform offers a comprehensive set of tools to help you track, analyze, and visualize your expenses like never before.
+                At Wallet Watch, we believe in smarter, simpler financial management. Take charge of your financial future with confidence and ease. Your journey to financial clarity starts here!</div>
+
+            <div id="home_para"><h2>Key Features:</h2>
+            <h4>Expense Overview: </h4>Stay on top of your spending with a clear, organized view of your expenses. Track your daily, weekly, and monthly transactions to identify where your money is going and stay within your budget.<br>
+
+            <h4>Data Analysis Tools:</h4> Gain actionable insights into your financial habits. Use interactive tables to filter, sort, and explore your spending patterns, making it easier to spot trends and areas for improvement.<br>
+
+            <h4>Visual Reports: </h4>Turn complex financial data into simple, meaningful visuals. Access bar charts, pie charts, and summary tables that provide a quick, clear understanding of your financial health at a glance.<br>
+
+            <h4>Personalized User Profile:</h4> Your personalized profile section ensures you always know who's logged in. View and manage your user information, account details, and preferences for a more tailored experience.
+            </div>
+        </div>
+        <div id="admin_expenses">
+            <div id="admin_header_exp">
+                <div id="hname">UserId</div>
+                <div id="hexp">Expense</div>
+                <div id="his">IsApproved</div>
+                <div id="hamount">Amount</div>
+                <div id="happrove">Approve/Reject</div>
+            </div>
+        </div>
+        <div id="admin_report">
+            <div id="two">
+                <div id="admin_exp" onclick="admin_view_exp()">Expenses Table(ALL)</div>
+                <div id="admin_pen" onclick="admin_view_pen()">Expenses Table (Accepted)</div>
+             </div>
+             <div id="admin_two">
+                <div id="admin_bar" onclick="admin_view_bar()">Bar Chart</div>
+                <div id="admin_pie" onclick="admin_view_pie()">Pie Chart</div>
+             </div>
+        </div>
+            <div id="admin_pie_back">
+            <div id="admin_close_pie" onclick="admin_close_pie()">&times</div>
+            <div id="admin_pie_con">
+                <canvas id="adminPieChart"></canvas>
+            </div>
+            </div>
+            <div id="admin_exp_back">
+            <div id="admin_close_exp" onclick="admin_close_exp()">&times</div>
+            <table id="admin_exp_table">
+                <tr>
+                    <th id="table">Expense_Name</th>
+                    <th id="table">Amount_Spent</th>
+                </tr>
+            </table>
+            </div>
+            <div id="admin_pen_back">
+            <div id="admin_close_pen" onclick="admin_close_pen()">&times</div>
+            <table id="admin_pen_table">
+                <tr>
+                    <th id="table">Expense_Name</th>
+                    <th id="table">Amount_Spent</th>
+                </tr>
+            </table>
+            </div>
+            <div id="admin_bar_back">
+            <div id="admin_close_bar" onclick="admin_close_bar()">&times</div>
+            <div id="admin_bar_con">
+                <canvas id="adminBarChart" width="400" height="200"></canvas>
+            </div>
+            </div>
+        <div id="admin_anal">
+            <table id="admin_anal_table">
+                <tr id="anal_head">
+                    <th>
+                        <select id="user_select" onchange="analyze()">
+                        <option value="alluser">-- All user --</option>
+                        </select>
+                    </th>
+                    <th>
+                        <select id="exp_select" onchange="analyze()">
+                        <option value="allexpense">-- All Expenses --</option>
+                        <option value="Food">Food</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Accomodation">Accomodation</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Subscriptions">Subscriptions</option>
+                        <option value="Office Utilities">Office Utilities</option>
+                        <option value="Others">Others</option>
+                        </select>
+                    </th>
+                    <th>Amount</th>
+                </tr>
+            </table>
+        </div>
+        <div id="admin_profile">
+            <div id="pro_header">Your Details</div>
+        </div>
+    </div>
+</body>
+
+</html>

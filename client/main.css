@@ -1,0 +1,900 @@
+body
+{
+    margin-top: 170px;
+}
+#login_home_page
+{
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+    position:fixed;
+    display:none;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+}
+#container
+{
+    border:25px solid #dfae73;
+    box-shadow: 4px 4px 25px #4e639e;
+    width:350px;
+    height:400px;
+    position:absolute;
+    background-color: #60a0ea;
+    top:27%;
+    left:7%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#login_header
+{
+    position:absolute;
+    font-size: 100px;
+}
+#prompt
+{
+    width:fit-content;
+    font-size:24px;
+}
+#inup
+{
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#signin_button,#signup_button
+{
+    font-size: 20px;
+    padding:5px;
+}
+#home_page
+{
+    /* width:100vw;
+    height:100vh; */
+    display: none;
+    left:0;
+    top:0;
+}
+#header
+{
+    position: fixed;
+    width:100%;
+    height:150px;
+    top:0%;
+    box-sizing: border-box;
+    border:5px solid rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+#header_one
+{
+    display:flex;
+    align-items: center;
+}
+#header_name
+{
+    font-size: 80px;
+}
+#logout_button
+{
+    height:25px;
+    width:80px;
+    font-size:18px;
+    position: absolute;
+    right:5%;
+}
+#header_two
+{
+    border-top:1px solid rgb(110, 105, 105);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.header_button
+{
+    padding:10px;
+    font-size:25px;
+}
+#homebut
+{
+    text-decoration: underline;
+    font-weight:bold;
+}
+#home
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    gap:60px;
+}
+#admin_home
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    gap:60px;
+}
+#home_header
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    gap:80px;
+}
+#home_content
+{
+    border:1px solid grey;
+    padding :10px;
+    width:90%;
+    font-size:25px;
+    font-weight: 2px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    word-spacing: 2px;
+    line-height: 50px;
+}
+#home_para
+{
+    font-size: 20px;
+    padding: 25px;
+}
+#expenses
+{
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width:100%;
+}
+#report
+{
+    display:none;
+    height: 100%;
+    width:100%;
+    gap:100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#profile
+{
+    display:none;
+    height:100%;
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+#pro_header
+{
+    font-size: 50px;
+    font-weight:bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+#pro_body
+{
+    align-items:center;
+    justify-content: center;
+}
+#pro_fname,#pro_lname,#pro_mail,#pro_zaaid,#pro_zuid,#pro_rname,#pro_rid,#pro_orgid
+{
+    font-size:25px;
+    border:1px solid black;
+    height:30px;
+    width:500px;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding:10px;
+    justify-content: center;
+    display: flex;
+    box-shadow: 2px 2px 20px rgba(93, 89, 89,0.5);
+}
+#add_exp
+{
+    width:80%;
+    font-size: 25px;
+    background-color:rgb(158, 158, 150);
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    margin:10px;
+}
+#add_exp:hover{
+    box-shadow: 10px 10px 50px grey;
+    background-color: white;
+    border:1px solid black;
+}
+#one_exp
+{
+    width:100%;
+    height:fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#added_exp
+{
+    background-color: #4e639e;
+    width:80%;
+    height:fit-content;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:10px;
+    margin: 10px;
+}
+#type_exp,#approved,#amount,#userid
+{
+    background-color: white;
+    font-size: 25px;
+    padding:10px;
+    height:35px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+}
+#userid
+{
+    background-color: white;
+    font-size: 22px;
+    padding:10px;
+    height:35px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+}
+#check
+{
+    background-color: white;
+    font-size: 25px;
+    padding:10px;
+    height:35px;
+    width:200px;
+    display: flex;
+    justify-content: space-around;
+}
+.tick
+{
+    display: flex;
+    color:white;
+    background-color: green;
+    border-radius: 100%;
+    height:35px;
+    width:35px;
+    justify-content: center;
+}
+.xmark
+{
+    display: flex;
+    color:white;
+    background-color: red;
+    border-radius: 100%;
+    height:35px;
+    width:35px;
+    justify-content: center;
+}
+#back
+{
+    position: absolute;
+    background-color: rgba(104, 101, 101, 0.881);
+    display:none;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+}
+#expense_form
+{
+    background-color: white;
+    width:500px;
+    height:500px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+#form_header
+{
+    width:100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom:60px;
+}
+label
+{
+    font-size: 25px;
+}
+select
+{
+    width:300px;
+    height:25px;
+    font-size: 20px;
+    font-weight: 1px;
+}
+#form_name,#form_amount
+{
+    margin-bottom: 20px;
+}
+#input_amount
+{
+    width:300px;
+    height:20px;
+}
+#form_buttons
+{
+    display: flex;
+    gap: 10px;
+    margin-top:200px;
+}
+#submit,#close
+{
+    font-size: 20px;
+    font-weight: 2px;
+}
+#two
+{
+    display:flex;
+    gap:100px;
+    margin:10px;
+}
+#exp
+{
+    width: 500px;
+    height:200px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(215,58,102);
+}
+#pen
+{
+    background-color:rgb(56,142,255);
+    width: 500px;
+    height:200px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pie
+{
+    background-color:rgb(36,211,153);
+    width: 500px;
+    height:200px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bar
+{
+    background-color:rgb(255,165,0);
+    width: 500px;
+    height:200px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pie:hover
+{
+    box-shadow: 10px 10px 50px grey;
+}
+#exp:hover
+{
+    box-shadow: 10px 10px 50px grey;
+}
+#bar:hover
+{
+    box-shadow: 10px 10px 50px grey;
+}
+#pen:hover
+{
+    box-shadow: 10px 10px 50px grey;
+}
+#pie_back
+{
+    display:none;
+    background-color: rgba(104, 101, 101, 0.936);
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    left:0%;
+    top:0%;
+    justify-content: center;
+    align-items: center;
+}
+#pie_con
+{
+    width:500px;
+    height: 500px;
+}
+#bar_con
+{
+    width:500px;
+    height:fit-content;
+    background-color: #ffffff;
+}
+#close_pie
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color:white;
+    font-weight: 2px;
+    font-size: 25px;
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+    position:absolute;
+    right:5%;
+    top:5%;
+}
+#exp_back
+{
+    display:none;
+    background-color: rgba(104, 101, 101, 0.936);
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    left:0%;
+    top:0%;
+    justify-content: center;
+    align-items: center;
+}
+#close_exp
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color:white;
+    font-weight: 2px;
+    font-size: 25px;
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+    position:absolute;
+    right:5%;
+    top:5%;
+}
+#pen_back
+{
+    display:none;
+    background-color: rgba(104, 101, 101, 0.936);
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    left:0%;
+    top:0%;
+    justify-content: center;
+    align-items: center;
+}
+#close_pen
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color:white;
+    font-weight: 2px;
+    font-size: 25px;
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+    position:absolute;
+    right:5%;
+    top:5%;
+}
+#bar_back
+{
+    display:none;
+    background-color: rgba(104, 101, 101, 0.936);
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    left:0%;
+    top:0%;
+    justify-content: center;
+    align-items: center;
+}
+#close_bar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color:white;
+    font-weight: 2px;
+    font-size: 25px;
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+    position:absolute;
+    right:5%;
+    top:5%;
+}
+#login_container
+{
+    width:600px;
+    height:600px;
+    background-color: #60a0ea;
+}
+#login_back
+{
+    display:none;
+    width:100%;
+    height: 100%;
+    top:0%;
+    left:0%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(104, 101, 101, 0.936);
+}
+#home_page_admin
+{
+    display: none;
+    left:0;
+    top:0;
+}
+#admin_header
+{
+    position: fixed;
+    width:100%;
+    height:150px;
+    top:0%;
+    box-sizing: border-box;
+    border:5px solid rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+#admin_header_one
+{
+    display:flex;
+    align-items: center;
+}
+#admin_profile
+{
+    display:none;
+    height:100%;
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+#admin_header_name
+{
+    font-size: 80px;
+}
+#admin_logout_button
+{
+    height:25px;
+    width:80px;
+    font-size:18px;
+    position: absolute;
+    right:5%;
+}
+#admin_header_two
+{
+    border-top:1px solid rgb(110, 105, 105);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.admin_header_button
+{
+    padding:10px;
+    font-size:25px;
+}
+#admhomebut
+{
+    text-decoration: underline;
+    font-weight:bold;
+}
+#admin_report
+{
+    display:none;
+    height: 100%;
+    width:100%;
+    gap:100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#admin_anal
+{
+    display:none;
+    width:100%;
+    height:100%;
+    justify-content: center;
+}
+#admin_anal_table
+{
+    border:1px solid black;
+    border-collapse: collapse;
+    font-size: 25px;
+    width:1100px;
+}
+#anal_head th
+{
+    border:1px solid black;
+    font-size: 25px;  
+    padding:10px;
+}
+#anal_body td
+{
+    border:1px solid black;
+    font-size: 25px;
+    padding:10px;
+}
+#admin_two
+{
+    display:flex;
+    gap:100px;
+    margin:10px;
+}
+#admin_exp
+{
+    width: 500px;
+    height:200px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(215,58,102);
+}
+#admin_pen
+{
+    background-color:rgb(56,142,255);
+    width: 500px;
+    height:200px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#admin_pie
+{
+    background-color:rgb(36,211,153);
+    width: 500px;
+    height:200px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#admin_bar
+{
+    background-color:rgb(255,165,0);
+    width: 500px;
+    height:200px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#admin_pie:hover
+{
+    box-shadow: 10px 10px 50px grey;
+}
+#admin_exp:hover
+{
+    box-shadow: 10px 10px 50px grey;
+}
+#admin_bar:hover
+{
+    box-shadow: 10px 10px 50px grey;
+}
+#admin_pen:hover
+{
+    box-shadow: 10px 10px 50px grey;
+}
+#admin_pie_back
+{
+    display:none;
+    background-color: rgba(104, 101, 101, 0.936);
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    left:0%;
+    top:0%;
+    justify-content: center;
+    align-items: center;
+}
+#admin_pie_con
+{
+    width:500px;
+    height: 500px;
+}
+#admin_bar_con
+{
+    width:500px;
+    height:fit-content;
+    background-color: #ffffff;
+}
+#admin_close_pie
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color:white;
+    font-weight: 2px;
+    font-size: 25px;
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+    position:absolute;
+    right:5%;
+    top:5%;
+}
+#admin_exp_back
+{
+    display:none;
+    background-color: rgba(104, 101, 101, 0.936);
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    left:0%;
+    top:0%;
+    justify-content: center;
+    align-items: center;
+}
+#admin_close_exp
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color:white;
+    font-weight: 2px;
+    font-size: 25px;
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+    position:absolute;
+    right:5%;
+    top:5%;
+}
+#admin_pen_back
+{
+    display:none;
+    background-color: rgba(104, 101, 101, 0.936);
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    left:0%;
+    top:0%;
+    justify-content: center;
+    align-items: center;
+}
+#admin_close_pen
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color:white;
+    font-weight: 2px;
+    font-size: 25px;
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+    position:absolute;
+    right:5%;
+    top:5%;
+}
+#admin_bar_back
+{
+    display:none;
+    background-color: rgba(104, 101, 101, 0.936);
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    left:0%;
+    top:0%;
+    justify-content: center;
+    align-items: center;
+}
+#admin_close_bar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color:white;
+    font-weight: 2px;
+    font-size: 25px;
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+    position:absolute;
+    right:5%;
+    top:5%;
+}
+#table
+{
+    border:1px solid black;
+    border-collapse: collapse;
+    min-width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#admin_pen_table,#admin_exp_table,#pen_table,#exp_table
+{
+    border:2px solid black;
+    border-collapse: collapse;
+    font-size: 25px;
+    text-align: center;
+    background-color: white;
+}
+#admin_one_exp
+{
+    width:100%;
+    height:fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90px;
+}
+#admin_expenses
+{
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width:100%;
+}
+#admin_header_exp
+{
+    position: fixed;
+    background-color: #ffffff;
+    width:80%;
+    height:fit-content;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:10px;
+    padding-top: 30px;
+}
+#hname,#happrove,#hexp,#hamount,#his
+{
+    background-color: rgb(255, 255, 255);
+    font-size: 25px;
+    padding:10px;
+    height:35px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+}
+.admin_added_exp
+{
+    background-color: #4e639e;
+    width:80%;
+    height:fit-content;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:10px;
+    margin: 10px;
+}
+#user_select,#exp_select
+{
+    width:100%;
+    font-size: 25px;
+    height:100%;
+}
